@@ -1,0 +1,42 @@
+<!--
+    just need to include three script's to run the RectJs in HTML 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Start by including three scripts, the first two let us write React code in our JavaScripts, 
+        and the third, Babel, allows us to write JSX syntax and ES6 in older browsers. -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h2>hello React</h2>
+    <p id="p"></p>
+    <script type="text/babel">
+      // First letter must be cappital of function.
+      function Name() {
+        let name_ = "karan";
+        return (
+          <h2>
+            hello my name is <h1>{name_}</h1>
+          </h2>
+        );
+      }
+
+      let para = document.getElementById("p");
+      const root = ReactDOM.createRoot(para);
+
+      root.render(<Name />);
+    </script>
+  </body>
+</html>
